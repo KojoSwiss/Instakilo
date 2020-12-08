@@ -1,0 +1,7 @@
+<div>
+  <%= simple_form_for @pic do |f| %>
+    <%= f.input :title, input_html: { class: 'form-group' }, error: 'title is mandatory, please specify one' %>
+    <%= f.input :description, input_html: { class: 'form-group' } %>
+    <%= f.button :submit, class:'btn btn-info' %>
+  <% end %>
+</div>
