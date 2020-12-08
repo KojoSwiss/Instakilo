@@ -1,5 +1,8 @@
 <h1>Index for the pics</h1>
 
 <% @pics.each do |pic| %>
-<h2><%= link_to pic.title, pic %></h2>
+  <h2><%= link_to pic.title, pic %></h2>
+  <h2><%= pic.description%></h2>
 <% end %>
+
+<%= link_to 'New Pic', new_pic_path  %>
