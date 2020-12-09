@@ -1,9 +1,11 @@
 <h1>Pic Show Page</h1>
 <div>
-  <h1><%= @pic.title %></h1>
+  <h2><%= @pic.title %></h2>
   <p><%= @pic.description %></p>
+  <%= cl_image_tag @pic.photo.key, height: 300, width: 400, crop: :fill %>
 </div>
 
 <%= link_to "Back", pics_path %>
 <%= link_to 'Edit', edit_pic_path %>
 <%= link_to 'Delete', pic_path, method: :delete, data: {confirm: "Are you sure"} %>
+<%= link_to 'Like', like_pic_path(@pic), method: :put, class: "btn btn-default"%>

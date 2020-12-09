@@ -3,6 +3,7 @@ class CreatePics < ActiveRecord::Migration[6.0]
     create_table :pics do |t|
       t.string :title
       t.text :description
+      t.references :user
 
       t.timestamps
     end
